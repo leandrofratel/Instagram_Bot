@@ -1,2 +1,2 @@
-# Intagram_Bot
+# Instagram_Bot
  
