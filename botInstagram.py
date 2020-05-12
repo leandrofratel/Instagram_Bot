@@ -13,7 +13,7 @@ class InstagramBot():
         """Inicia o Firefox."""
         driver = self.driver
         driver.get('https://www.instagram.com')
-        sleep(3)
+        sleep(2)
 
         # Identifica o user_name, limpa o campo e preenche com o nome de usuário.
         user_element = driver.find_element_by_xpath("//input[@name='username']")
@@ -27,27 +27,32 @@ class InstagramBot():
         sleep(1)
         pass_element.send_keys(self.password)
         pass_element.send_keys(Keys.RETURN)
-        sleep(5)
+        sleep(7)
 
         # Encontrar o perfil e curtir a primeira foto.
-        self.localizar_e_cutir('gustavoguanabara')
+        self.localizar_e_cutir('ambsiau')
 
     def localizar_e_cutir(self, perfil):
         driver = self.driver
         driver.get('https://www.instagram.com/' + perfil + '/')
-        sleep(1)
+        sleep(2)
 
         # Clica na primeira foto.
         pic = driver.find_element_by_class_name("_9AhH0")
         pic.click()
-        sleep(2)
-
-        # Curti a primeira foto.
-        like = driver.find_element_by_class_name('//button[@class="wpO6b "]') 
-        sleep(2) 
+        sleep(3)
+        
+        # Curtir
+        like = driver.find_element_by_class_name("fr66n")
         like.click()
+        sleep(3)
 
-instancia = InstagramBot('fratel.l', 'Le@nd42453390')
+        # Proxima foto.
+        prx_foto = driver.find_element_by_xpath('/html/body/div[4]/div[1]/div/div/a')
+        prx_foto.click()
+        sleep(3)
+
+instancia = InstagramBot('heraklless', 'Le@nd42453390')
 instancia.login()
+
 # gustavoguanabara
-# theaigirl
