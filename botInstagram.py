@@ -30,7 +30,7 @@ class InstagramBot():
         sleep(7)
 
         # Encontrar o perfil e curtir a primeira foto.
-        self.localizar_e_cutir('ambsiau')
+        self.localizar_e_cutir('gustavoguanabara')
 
     def localizar_e_cutir(self, perfil):
         driver = self.driver
@@ -52,7 +52,15 @@ class InstagramBot():
         prx_foto.click()
         sleep(3)
 
-instancia = InstagramBot('heraklless', 'Le@nd42453390')
+        while True:
+            b_like = driver.find_element_by_class_name("fr66n").click()
+            prx_foto.click()
+            sleep(7)
+      
+
+instancia = InstagramBot('fratel.', 'Le@nd42453390')
 instancia.login()
 
+# celia_gabbiani44
+# jas_stayfit
 # gustavoguanabara
