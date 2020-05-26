@@ -35,28 +35,28 @@ class InstagramBot():
     def localizar_e_cutir(self, perfil):
         driver = self.driver
         driver.get('https://www.instagram.com/' + perfil + '/')
-        sleep(5)
+        sleep(7)
 
         # Clica na primeira foto.
         pic = driver.find_element_by_class_name("_9AhH0")
         pic.click()
-        sleep(3)
+        sleep(5)
         
         # Curtir
         like = driver.find_element_by_class_name("fr66n")
         like.click()
-        sleep(3)
+        sleep(5)
 
         # Proxima foto.
         prx_foto = driver.find_element_by_xpath('/html/body/div[4]/div[1]/div/div/a')
         prx_foto.click()
-        sleep(3)
+        sleep(5)
 
         while True:
             pic_like = driver.find_element_by_class_name("fr66n").click()
             sleep(7)
             prx_foto.click()
-            sleep(3)
+            sleep(7)
       
 
 instancia = InstagramBot('"""Informe seu usuário"""', '"""Informe sua senha"""')
