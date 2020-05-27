@@ -72,5 +72,5 @@ class InstagramBot():
                 prx_foto.click()
                 sleep(7)
 
-instancia = InstagramBot(input('Insira o seu usuario: '), 'Agora a sua senha: ')
+instancia = InstagramBot(input('Insira o seu usuario: '), input('Informe sua senha: '))
 instancia.login()
