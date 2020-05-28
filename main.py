@@ -52,6 +52,7 @@ class InstagramBot():
         prx_foto.click()
         sleep(10)
 
+        contador = 1
         while True:
             # Localiza o botão de like.
             like = driver.find_element_by_class_name("fr66n")
@@ -71,6 +72,8 @@ class InstagramBot():
                 # passa para a proxima foto.
                 prx_foto.click()
                 sleep(7)
+            contador += 1
+            print(f'Total de fotos curtidas: {contador}')
 
 instancia = InstagramBot(input('Insira o seu usuario: '), input('Informe sua senha: '))
 instancia.login()
