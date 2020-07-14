@@ -52,7 +52,7 @@ class InstagramBot():
         prx_foto.click()
         sleep(10)
 
-        contador = 1
+        contador = 2
         while True:
             # Localiza o botão de like.
             like = driver.find_element_by_class_name("fr66n")
