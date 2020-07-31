@@ -37,7 +37,7 @@ class InstagramBot():
         driver.get('https://www.instagram.com/' + perfil + '/')
         sleep(3)
 
-        # Clica na primeira foto.
+        # Clica na primeira foto. 
         pic = driver.find_element_by_class_name("_9AhH0")
         pic.click()
         sleep(7)
